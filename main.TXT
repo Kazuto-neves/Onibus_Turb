@@ -1,0 +1,333 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+int main() {
+    char nome[20],sexo[2],s[2];
+    int idade,emp,tipo,det,quat,q;
+    float pe,pt,pd,pq,preco,total=0;
+    printf("Bem vindo ao terminal de viagens.\n");
+    printf("-----------------------------------------------------------------\n");
+    printf("Digite so o primeiro nome.\n");
+    printf("-----------------------------------------------------------------\n");
+    printf("Digite o seu nome: ");
+    scanf("%s",nome);
+    printf("-----------------------------------------------------------------\n");
+    while(strcmp(nome,"end")!=0) {
+        printf("Digite a sua idade: ");
+        scanf("%d",&idade);
+        printf("-----------------------------------------------------------------\n");
+        printf("Digite\n M para sexo masculino ou \n F para feminino: ");
+        scanf("%s",s);
+        printf("-----------------------------------------------------------------\n");
+        if (strcmp(s,"M")==0) {
+            strcpy(sexo, "Sr ");
+        } else {
+            strcpy(sexo, "Sra ");
+        }
+        printf("Digite\n 1 para Unica R$ 10.00 \n 2 para tres amigos R$ 5.00: ");
+        scanf("%d",&emp);
+        if (emp == 1) {
+            pe=10;
+            printf("-----------------------------------------------------------------\n");
+            printf("Digite\n 1 para Convencional R$ 5.00 \n 2 para Executivo R$ 10.00: ");
+            scanf("%d",&tipo);
+            if (tipo == 1) {
+                pt=5;
+                printf("-----------------------------------------------------------------\n");
+                printf("Digite\n 1 para Juiz de Fora R$ 30.00\n 2 para Cabo Frio R$ 40.00\n 3 para outros R$ 10.00: ");
+                scanf("%d",&det);
+                if (det == 1) {
+                    pd=30;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >= 60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                } else if (det == 2) {
+                    pd=40;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >=60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                } else {
+                    pd=10;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >=60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                }
+            } else {
+                pt=10;
+                printf("-----------------------------------------------------------------\n");
+                printf("Digite\n 1 para Juiz de Fora R$ 40.00\n 2 para Cabo Frio R$ 50.00\n 3 para outros R$ 20.00: ");
+                scanf("%d",&det);
+                if (det == 1) {
+                    pd=40;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >= 60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                } else if (det == 2) {
+                    pd=50;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >=60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                } else {
+                    pd=20;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >=60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                }
+            }
+        } else {
+            pe=5;
+            printf("-----------------------------------------------------------------\n");
+            printf("Digite\n 1 para Convencional R$ 2.00 \n 2 para Executivo R$ 8.00: ");
+            scanf("%d",&tipo);
+            if (tipo == 1) {
+                pt=2;
+                printf("-----------------------------------------------------------------\n");
+                printf("Digite\n 1 para Rio de Janeiro R$ 25.50 \n 2 para Cabo Frio R$ 20.10\n 3 para outros R$ 15.50: ");
+                scanf("%d",&det);
+                if (det == 1) {
+                    pd=25.50;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >=60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                } else if (det == 2) {
+                    pd=20.10;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >=60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                } else {
+                    pd=15.50;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >=60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=1*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                }
+            } else {
+                pt=8;
+                printf("-----------------------------------------------------------------\n");
+                printf("Digite\n 1 para Rio de Janeiro R$ 30.50 \n 2 para Cabo Frio R$ 40.10\n 3 para outros R$ 25.50: ");
+                scanf("%d",&det);
+                if (det == 1) {
+                    pd=30.50;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >=60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                } else if (det == 2) {
+                    pd=40.10;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >=60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                } else {
+                    pd=25.50;
+                    printf("-----------------------------------------------------------------\n");
+                    printf("Digite quantas pessoas vao com voce: ");
+                    scanf("%d",&quat);
+                    printf("-----------------------------------------------------------------\n");
+                    if (idade <6 || idade >=60) {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q-1));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    } else {
+                        printf("Tera alguma pessoa de idade acima de\n 60 anos ou abaixo dos 6 anos\n se sim digite quantas pessoas \n se nao digite 0(zero): ");
+                        scanf("%d",&q);
+                        printf("-----------------------------------------------------------------\n");
+                        preco=pe+pt+pd+(pq=2*(quat-q));
+                        printf("%s%s o valor dessa viagem sera de:R$ %g \n",sexo,nome,preco);
+                        total+=preco;
+                    }
+                }
+            }
+        }
+        printf("-----------------------------------------------------------------\n");
+        printf("Para enserra o programa digite *end* nome.\n");
+        printf("-----------------------------------------------------------------\n");
+        printf("Digite so o primeiro nome.\n");
+        printf("-----------------------------------------------------------------\n");
+        printf("Digite o seu nome: ");
+        scanf("%s",nome);
+        printf("-----------------------------------------------------------------\n");
+    }
+    printf("Total arrecadado foi de:R$ %g",total);
+    printf("\n");
+    system("pause");
+    return 0;
+}
