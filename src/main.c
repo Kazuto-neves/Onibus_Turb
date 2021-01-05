@@ -3,7 +3,7 @@
 #include <string.h>
 #include <conio.h>
 
-#include "uteis.h"
+#include "ulteis.h"
 #include "Empresa.h"
 
 #define ONE 49
@@ -11,21 +11,27 @@
 #define TRE 51
 #define FOR 52
 #define KEY_ESC 27
-#define KEY_ENTER 13
+//#define KEY_ENTER 13
+
 
 int menu(){
   int opc;
   int key = 0;
+
   do {
     limparTela();
-    printf("%s 1-Inserir\n",(key == ONE)? "Û":" ");
-    printf("%s 2-Remover\n",(key == TWO)? "Û":" ");
-    printf("%s 3-Alterar\n",(key == TRE)? "Û":" ");
-    printf("%s 4-Mostrar Todos os Brinquedos\n",(key == FOR)? "Û":" ");
-    printf("%s 0-Sair\n",(key == KEY_ESC)? "Û":" ");
+    printf("%s 1-Inserir\n",(key == ONE)? "-->":" ");
+    printf("%s 2-Remover\n",(key == TWO)? "-->":" ");
+    printf("%s 3-Alterar\n",(key == TRE)? "-->":" ");
+    printf("%s 4-Mostrar Todos os Brinquedos\n",(key == FOR)? "-->":" ");
+    printf("%s 0-Sair\n",(key == KEY_ESC)? "-->":" ");
 	key = getch();
-	if (key == KEY_ESC)return 0;
-  } while (opc<1 || opc>4);
+	//if(key == ONE)opc==1;
+	//if(key == TWO)opc==2;
+	//if(key == TRE)opc==3;
+	//if(key == FOR)opc==4;
+	//if(key == KEY_ESC)opc==0;
+  } while (key);
   fflush(stdin);
   limparTela();
   return key;
@@ -84,7 +90,7 @@ int main(){
 		case 27:/*fim*/
            fim=1;
            break;
-   }
+		   }
    }
    return 0;
 }
